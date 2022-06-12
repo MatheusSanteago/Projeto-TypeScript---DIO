@@ -16,11 +16,11 @@ let sessionId;
 let loginButton = document.getElementById("login-button");
 let searchButton = document.getElementById("search-button");
 let searchContainer = document.getElementById("search-container");
-// loginButton.addEventListener("click", async () => {
-//   await criarRequestToken();
-//   await logar();
-//   await criarSessao();
-// });
+loginButton.addEventListener("click", () => __awaiter(void 0, void 0, void 0, function* () {
+    yield criarRequestToken();
+    yield logar();
+    yield criarSessao();
+}));
 searchButton.addEventListener("click", () => __awaiter(void 0, void 0, void 0, function* () {
     let lista = document.getElementById("lista");
     if (lista) {
@@ -98,7 +98,6 @@ class HttpClient {
 function procurarFilme(query) {
     return __awaiter(this, void 0, void 0, function* () {
         query = query;
-        console.log(query + " NOME");
         let result = yield HttpClient.get({
             url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&language=pt-BR`,
             method: "GET",

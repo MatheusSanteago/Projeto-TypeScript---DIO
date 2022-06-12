@@ -9,11 +9,11 @@ let loginButton = document.getElementById("login-button") as HTMLButtonElement;
 let searchButton = document.getElementById("search-button") as HTMLButtonElement;
 let searchContainer = document.getElementById("search-container") as HTMLBodyElement;
 
-// loginButton.addEventListener("click", async () => {
-//   await criarRequestToken();
-//   await logar();
-//   await criarSessao();
-// });
+loginButton.addEventListener("click", async () => {
+  await criarRequestToken();
+  await logar();
+  await criarSessao();
+});
 
 searchButton.addEventListener("click", async () => {
   let lista = document.getElementById("lista") as HTMLBodyElement;
@@ -100,7 +100,6 @@ class HttpClient {
 
 async function procurarFilme(query:string) {
   query = query;
-  console.log(query + " NOME");
   let result = await HttpClient.get({
     url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&language=pt-BR`,
     method: "GET",
