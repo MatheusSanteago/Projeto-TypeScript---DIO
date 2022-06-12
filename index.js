@@ -8,10 +8,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-let apiKey = "721b346f73c11fd9715c5f8e5a5561bd";
+let apiKey;
 let requestToken;
-let username = 'msanteago';
-let password = 'xxx';
+let username;
+let password;
 let sessionId;
 let loginButton = document.getElementById("login-button");
 let searchButton = document.getElementById("search-button");

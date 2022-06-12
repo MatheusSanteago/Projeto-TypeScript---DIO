@@ -1,8 +1,8 @@
 
-let apiKey: string = "721b346f73c11fd9715c5f8e5a5561bd"
+let apiKey: string;
 let requestToken;
-let username: string = 'msanteago'
-let password: string = 'xxx'
+let username: string;
+let password: string;
 let sessionId: "7101979";
 
 let loginButton = document.getElementById("login-button") as HTMLButtonElement;
